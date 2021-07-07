@@ -4,7 +4,7 @@ import { Container, UserData, UserPicture, LinkContent, Title, GroupLink, Direct
 
 const SideBar: React.FC = () => {
     return (
-        <Container>
+        <Container >
             <UserData >
                 <h1>Felipe Morais</h1>
                 <span>felipeprodev@gmail.com</span>

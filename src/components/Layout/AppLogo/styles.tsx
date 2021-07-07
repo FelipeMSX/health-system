@@ -18,8 +18,9 @@ export const LeftContainer= styled.div`
     align-items: center;
 
     > span {
+        font-size: 16px;
         color: var(--white);
-        font-weight: bold;
+        font-weight: 500;
         text-transform: uppercase;
         margin-left: 20px;
         

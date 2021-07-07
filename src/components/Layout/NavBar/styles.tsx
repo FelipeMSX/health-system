@@ -10,7 +10,6 @@ export const Container = styled.div`
     background-color: white;
     width: 100%;
     height: 64px;
-
 `;
 
 export const LeftBar = styled.div`
@@ -44,8 +43,6 @@ export const UserInfo = styled.div`
         border-radius: 50%;
         margin-right: 10px;
     }
-
-
 `;
 
 export const UserLabel= styled.div`

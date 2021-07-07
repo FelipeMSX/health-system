@@ -15,7 +15,7 @@ export default createGlobalStyle `
         border: 0;
         outline: 0;
 
-        font-family: 'Roboto', sans-serif
+        font-family: 'Poppins','Roboto', sans-serif
     }
     :root{
         --primary: #1b2330;

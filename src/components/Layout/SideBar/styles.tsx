@@ -10,14 +10,19 @@ export const Container = styled.div`
     background-color: var(--primary);
     width: 280px;
     height:  calc(100vh - 64px);
-    position:relative;
-    overflow-y: scroll;
-    overflow: overlay;
-    overflow-x: hidden;
-        
+    position: relative;
+    overflow: hidden;
+
     > div {
         height: 4000px;
     }
+
+    &:hover{
+        overflow-y: scroll;
+        overflow: overlay;
+        overflow-x: hidden;
+    }
+
     ::-webkit-scrollbar{
         width: 10px;
         scrollbar-width: initial;
@@ -46,16 +51,17 @@ export const UserData = styled.div`
     box-shadow: rgba(0,0,0,0.2) 0px 3px 0px 0px;
     
     > h1 {
-        font-size: 17px;
-        font-weight: bold;
+        font-size: 18px;
+        font-weight: 600;
         color: var(--white);
         line-height: 25px;
     }
     
     > span{
-        font-size: 15px;
+        font-size: 13px;
         color: var(--white);
         opacity: 50%;
+        font-weight: 500;
     }
 
 `;
@@ -65,8 +71,8 @@ export const UserPicture = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 70px;
-    height: 70px;
+    width: 88px;
+    height: 88px;
 
     bottom: -30px;
     border-radius: 50px;
@@ -74,8 +80,8 @@ export const UserPicture = styled.div`
     background-color: var(--secondary);
 
     > img {
-        width: 50px;
-        height: 50px;
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
     }
 `;

@@ -5,7 +5,7 @@ import  IconButton from '../../IconButton';
 
 const NavBar: React.FC = () => {
     return (
-        <Container>
+        <Container >
             <LeftBar>
                 <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
                 <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
