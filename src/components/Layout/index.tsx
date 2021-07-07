@@ -2,16 +2,16 @@ import React from 'react';
 
 import { Grid } from './styles';
 import AppLogo from './AppLogo';
-import AppLink from './AppLink';
-import ActionBar from './ActionBar'
+import SideBar from './SideBar';
+import NavBar from './NavBar'
 import ContentArea from './ContentArea'
 
 const Layout: React.FC = () => {
     return (
         <Grid>
             <AppLogo/>
-            <AppLink/>
-            <ActionBar/>
+            <SideBar/>
+            <NavBar/>
             <ContentArea/>
         </Grid>
     )

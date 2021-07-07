@@ -3,7 +3,7 @@ import React from "react";
 import { Container, LeftBar, RightBar, UserInfo, UserLabel} from "./styles";
 import  IconButton from '../../IconButton';
 
-const ActionBar: React.FC = () => {
+const NavBar: React.FC = () => {
     return (
         <Container>
             <LeftBar>
@@ -24,4 +24,4 @@ const ActionBar: React.FC = () => {
     )
 };
 
-export default ActionBar;
+export default NavBar;

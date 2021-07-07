@@ -2,10 +2,10 @@ import React from "react";
 
 import { Container, UserData, UserPicture, LinkContent, Title, GroupLink, DirectLink, LinkInfo, PersonIcon} from "./styles";
 
-const AppLink: React.FC = () => {
+const SideBar: React.FC = () => {
     return (
         <Container>
-            <UserData>
+            <UserData >
                 <h1>Felipe Morais</h1>
                 <span>felipeprodev@gmail.com</span>
                 <UserPicture>
@@ -37,4 +37,4 @@ const AppLink: React.FC = () => {
     )
 };
 
-export default AppLink;
+export default SideBar;
