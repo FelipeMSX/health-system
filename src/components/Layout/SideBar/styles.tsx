@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { PersonPlusFill } from "@styled-icons/bootstrap/PersonPlusFill";
 
-export const Container = styled.div`
+import { Props } from '.';
+
+
+export const Container = styled.div<Props>`
     grid-area: AL;
     /* display: flex;
     flex-direction: column; */
@@ -12,6 +15,8 @@ export const Container = styled.div`
     height:  calc(100vh - 64px);
     position: relative;
     overflow: hidden;
+    display: ${(props) => props.isOpened ? 'inline' : 'none' };
+
 
     > div {
         height: 4000px;

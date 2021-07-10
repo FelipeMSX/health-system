@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Grid } from './styles';
 import AppLogo from './AppLogo';
@@ -6,12 +6,17 @@ import SideBar from './SideBar';
 import NavBar from './NavBar'
 import ContentArea from './ContentArea'
 
+export interface Props {
+    isOpened?: boolean
+}
+
 const Layout: React.FC = () => {
+    const [sideBarVisible, showSideBar] = useState(true);
+
     return (
         <Grid>
-            <AppLogo/>
-            <SideBar/>
-            <NavBar/>
+            <SideBar isOpened={sideBarVisible}/>
+            <NavBar />
             <ContentArea/>
         </Grid>
     )

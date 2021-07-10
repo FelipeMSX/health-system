@@ -1,11 +1,21 @@
 import React from "react";
-
-import { Container, LeftContainer } from "./styles";
 import  IconButton from '../../IconButton';
 
-const AppLogo: React.FC = () => {
+import { 
+    Container, 
+    LeftContainer 
+} from "./styles";
+
+export interface Props {
+    isOpened?: boolean
+}
+
+const AppLogo: React.FC<Props> = ({ 
+    isOpened
+}) => {
+
     return (
-        <Container>
+        <Container isOpened={isOpened}>
             <LeftContainer>
                 <img src='logo192.png'></img>
                 <span>Health</span>

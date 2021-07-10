@@ -8,8 +8,6 @@ const NavBar: React.FC = () => {
         <Container >
             <LeftBar>
                 <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
-                <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
-
             </LeftBar>
             <RightBar>
                 <UserInfo>

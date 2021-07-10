@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Props } from '.';
 
-export const Container = styled.div`
+
+export const Container = styled.div<Props>`
     grid-area: AN;
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +11,7 @@ export const Container = styled.div`
     background-color: var(--primary);
     width: 280px;
     height: 64px;
+    display: ${(props) => props.isOpened ? 'flex' : 'none' };
 
 `;
 

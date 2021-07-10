@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {Button, MenuOpenIcon} from './styles'; 
+import { Button, MenuOpenIcon} from './styles'; 
 
 export interface Props {
     color?: string,
