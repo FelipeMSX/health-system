@@ -1,6 +1,19 @@
 import React from "react";
 
-import { Container, UserData, UserPicture, LinkContent, Title, GroupLink, DirectLink, LinkInfo, PersonIcon} from "./styles";
+import { 
+    Container, 
+    UserData, 
+    UserPicture, 
+    LinkContent, 
+    Title, 
+    GroupLink, 
+    DirectLink, 
+    LinkInfo, 
+    PersonIcon 
+} from "./styles";
+
+import { Link } from 'react-router-dom';
+
 
 const SideBar: React.FC = () => {
     return (
@@ -28,8 +41,19 @@ const SideBar: React.FC = () => {
                 </GroupLink> */}
                 <DirectLink>
                     <LinkInfo>
+                    <Link to ='/health-agent'>
                         <PersonIcon/>
                         <span>Agente de Saúde</span>
+                    </Link>
+                    </LinkInfo>
+                </DirectLink>
+
+                <DirectLink>
+                    <LinkInfo>
+                    <Link to ='/street'>
+                        <PersonIcon/>
+                        <span>Rua</span>
+                    </Link>
                     </LinkInfo>
                 </DirectLink>
             </LinkContent>
