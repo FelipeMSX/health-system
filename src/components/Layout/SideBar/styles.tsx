@@ -105,21 +105,27 @@ export const Title = styled.div`
     display: flex;
     margin-left: 12px;
     margin-top: 40px;
-    font-size: 8px;
-    font-weight: bold;
     color: var(--white);
-    width: 280px;
-    height: 30px;
+    width: 100%;
+    height: 40px;
     align-items: center;
-    text-transform: uppercase;
+
+    > h1{
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: .7;
+
+    }
 
 
 `;
 
 export const LinkInfo = styled.div`
-    cursor:pointer;
+    cursor: pointer;
 
-    > span{
+    > Link span{
         margin-left: 10px;
         color: var(--white);
         opacity: .6;

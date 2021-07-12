@@ -128,6 +128,7 @@ export const ArrowBackIcon = styled(ArrowBack)`
 
 export const MainArea = styled.div`
     display: flex;
+    flex-direction: column;
     background-color: white;
     height: 100%;
     border-radius: 20px 20px 0 0;

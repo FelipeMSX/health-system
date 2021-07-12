@@ -22,7 +22,6 @@ export interface Props {
 
 
 const SideBar: React.FC<Props> = ({
-    
 }) => {
 
     const [sideBarVisible, showSideBar] = useState(true);
@@ -40,10 +39,7 @@ const SideBar: React.FC<Props> = ({
                 </UserData>
                 <LinkContent>
                     <Title>
-                        <h1>Aplicação</h1>
-                    </Title>
-                    <Title>
-                        <h1>Aplicação</h1>
+                        <h1>Applications</h1>
                     </Title>
                     {/* <GroupLink>
                     <ul>
@@ -54,16 +50,25 @@ const SideBar: React.FC<Props> = ({
                 </GroupLink> */}
                     <DirectLink>
                         <LinkInfo>
-                            <Link to='/health-agent'>
+                            <Link to='/health-agent' style= {{textDecoration: 'none'}}>
                                 <PersonIcon />
-                                <span>Agente de Saúde</span>
+                                <span>Agente de Saúde Lis</span>
                             </Link>
                         </LinkInfo>
                     </DirectLink>
 
                     <DirectLink>
                         <LinkInfo>
-                            <Link to='/street'>
+                            <Link to='/health-agent/create' style= {{textDecoration: 'none'}}>
+                                <PersonIcon />
+                                <span>Agente de Saúde Cas</span>
+                            </Link>
+                        </LinkInfo>
+                    </DirectLink>
+
+                    <DirectLink>
+                        <LinkInfo>
+                            <Link to='/street' style= {{textDecoration: 'none'}}>
                                 <PersonIcon />
                                 <span>Rua</span>
                             </Link>

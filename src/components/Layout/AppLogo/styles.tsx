@@ -24,7 +24,7 @@ export const LeftContainer= styled.div`
         color: var(--white);
         font-weight: 500;
         text-transform: uppercase;
-        margin-left: 20px;
+        margin-left: 80px;
         
     }
 

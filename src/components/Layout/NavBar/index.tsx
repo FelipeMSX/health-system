@@ -1,13 +1,30 @@
 import React from "react";
 
-import { Container, LeftBar, RightBar, UserInfo, UserLabel} from "./styles";
+import { 
+    Container, 
+    LeftBar, 
+    RightBar, 
+    UserInfo, 
+    UserLabel,
+    ToggleableItem
+} from "./styles";
+
 import  IconButton from '../../IconButton';
 
-const NavBar: React.FC = () => {
+export interface Props {
+    isOpened?: boolean
+}
+
+const NavBar: React.FC<Props> = ({
+    isOpened
+}) => {
     return (
         <Container >
             <LeftBar>
-                <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
+                <ToggleableItem isOpened>
+                    <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
+
+                </ToggleableItem>
             </LeftBar>
             <RightBar>
                 <UserInfo>

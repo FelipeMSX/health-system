@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Props } from '.';
 
 export const Container = styled.div`
     grid-area: TB;
@@ -16,6 +17,11 @@ export const LeftBar = styled.div`
     display: flex;
 `;
 
+export const ToggleableItem = styled.div<Props>`
+    display: ${(props) => props.isOpened ? 'flex' : 'none' };
+`;
+
+
 export const RightBar = styled.div`
     display: flex;
 `;
@@ -25,10 +31,11 @@ export const UserInfo = styled.div`
     flex-direction: row;
     align-items: center;
     border-radius: 18px;
-    width: 150px;
     height: 52px;
     justify-content: space-between;
     cursor: pointer;
+    width: max-content;
+
 
 
     transition: background-color 0.2s;
@@ -45,7 +52,7 @@ export const UserInfo = styled.div`
     }
 `;
 
-export const UserLabel= styled.div`
+export const UserLabel = styled.div`
     display: flex;
     flex-direction: column;
     line-height: 20px;
@@ -60,7 +67,7 @@ export const UserLabel= styled.div`
         color: var(--fontBlack);
     }
 
-    >span {
+    > span {
         text-align: right;
         font-size: 10px;
         font-weight: normal;

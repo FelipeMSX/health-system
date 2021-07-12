@@ -16,7 +16,7 @@ const Layout: React.FC = () => {
     return (
         <Grid>
             <SideBar isOpened={sideBarVisible}/>
-            <NavBar />
+            <NavBar isOpened={sideBarVisible}/>
             <ContentArea/>
         </Grid>
     )

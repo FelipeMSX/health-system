@@ -1,13 +1,34 @@
 import { TextField } from '@material-ui/core';
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 
-import {Container, Input} from './styles'
+import { Container, Input } from './styles'
+export interface Props {
+    labelName: string,
+    type: string,
+    required?: boolean,
+    name?: string
+    onChange?: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement> | undefined
 
-const TextBox: React.FC = () => {
+}
+
+const TextBox: React.FC<Props> = ({
+    labelName,
+    required,
+    type,
+    name,
+    onChange
+}) => {
     return (
-    <Container>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-    </Container>
+        <Container>
+            <TextField id="outlined-basic"
+                variant="outlined"
+                required={required}
+                label={labelName}
+                type={type}
+                name={name}
+                onChange = {onChange}
+            />
+        </Container>
     )
 };
 
