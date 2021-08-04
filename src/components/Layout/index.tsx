@@ -10,6 +10,9 @@ export interface Props {
     isOpened?: boolean
 }
 
+
+const SideBarExpandedContext = React.createContext(true);
+
 const Layout: React.FC = () => {
     const [sideBarVisible, showSideBar] = useState(true);
 
