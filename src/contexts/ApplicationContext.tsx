@@ -1,11 +1,10 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState } from "react";
+import { useContext } from "react";
 import { ReactNode } from "react";
 
-
-
 type ContextValue ={
-  sideBarExpanded: boolean;
-  setSideBarExpanded(value:boolean): void;
+  isSideBarExpanded: boolean;
+  setSideBarVisibilty(value:boolean): void;
 }
 type Props = {
   children:ReactNode
@@ -13,15 +12,15 @@ type Props = {
 }
 const ApplicationContext = createContext<ContextValue | undefined>(void 0);
 
-export function ApplicationContextProvider(props: Props) {
+export function AppContextProvider(props: Props) {
   const { children } = props;
-  const [sideBarExpanded, setSideBarExpanded] = useState(true);
+  const [isSideBarExpanded, setSideBarVisibilty] = useState(true);
 
   return (
     <ApplicationContext.Provider
       value={{
-        sideBarExpanded,
-        setSideBarExpanded
+        isSideBarExpanded: isSideBarExpanded,
+        setSideBarVisibilty: setSideBarVisibilty
       }}
     >
       {children}
@@ -29,9 +28,11 @@ export function ApplicationContextProvider(props: Props) {
   );
 }
 
-export function useCount() {
+export function UseAppContext() {
   const context = useContext(ApplicationContext);
-  if (!context) throw new Error("useCount must be used within a CountProvider");
-  const { count, setCount } = context;
-  return { count, setCount };
+
+  if(typeof context === "undefined")
+    throw new Error("the function must be used within and AppContext!")
+
+  return context;
 }

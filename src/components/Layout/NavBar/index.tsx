@@ -10,6 +10,7 @@ import {
 } from "./styles";
 
 import  IconButton from '../../IconButton';
+import { UseAppContext } from "../../../contexts/ApplicationContext";
 
 export interface Props {
     isOpened?: boolean
@@ -18,10 +19,12 @@ export interface Props {
 const NavBar: React.FC<Props> = ({
     isOpened
 }) => {
+    const {isSideBarExpanded, setSideBarVisibilty} = UseAppContext();
+    
     return (
         <Container >
             <LeftBar>
-                <ToggleableItem isOpened>
+                <ToggleableItem isOpened ={!isSideBarExpanded}>
                     <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
 
                 </ToggleableItem>

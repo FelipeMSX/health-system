@@ -14,6 +14,7 @@ import {
 
 import { Link } from 'react-router-dom';
 import AppLogo from "../AppLogo";
+import { UseAppContext } from "../../../contexts/ApplicationContext";
 
 
 export interface Props {
@@ -24,12 +25,12 @@ export interface Props {
 const SideBar: React.FC<Props> = ({
 }) => {
 
-    const [sideBarVisible, showSideBar] = useState(true);
+    const {isSideBarExpanded, setSideBarVisibilty} = UseAppContext();
 
     return (
         <>
-            <AppLogo isOpened={sideBarVisible}></AppLogo>
-            <Container isOpened={sideBarVisible}>
+            <AppLogo isOpened={isSideBarExpanded}></AppLogo>
+            <Container isOpened={isSideBarExpanded}>
                 <UserData >
                     <h1>Felipe Morais</h1>
                     <span>felipeprodev@gmail.com</span>
@@ -75,7 +76,6 @@ const SideBar: React.FC<Props> = ({
                         </LinkInfo>
                     </DirectLink>
                 </LinkContent>
-                <button onClick={() => showSideBar(!sideBarVisible)}> Teste +{'' + sideBarVisible}</button>
             </Container>
         </>
     )
