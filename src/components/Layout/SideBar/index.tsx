@@ -29,8 +29,8 @@ const SideBar: React.FC<Props> = ({
 
     return (
         <>
-            <AppLogo isOpened={isSideBarExpanded}></AppLogo>
-            <Container isOpened={isSideBarExpanded}>
+            <AppLogo></AppLogo>
+            <Container className={isSideBarExpanded ? "": "expanded"}>
                 <UserData >
                     <h1>Felipe Morais</h1>
                     <span>felipeprodev@gmail.com</span>
@@ -76,6 +76,7 @@ const SideBar: React.FC<Props> = ({
                         </LinkInfo>
                     </DirectLink>
                 </LinkContent>
+                <button onClick={() => setSideBarVisibilty(false)}> Teste</button>
             </Container>
         </>
     )

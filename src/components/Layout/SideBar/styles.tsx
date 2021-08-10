@@ -6,17 +6,18 @@ import { Props } from '.';
 
 export const Container = styled.div<Props>`
     grid-area: AL;
-    /* display: flex;
-    flex-direction: column; */
-
     padding-top: 24px;
     background-color: var(--primary);
-    width: 280px;
     height:  calc(100vh - 64px);
     position: relative;
     overflow: hidden;
-    display: ${(props) => props.isOpened ? 'inline' : 'none' };
 
+    margin-left: 0;
+    transition: margin-left 0.2s;
+    
+    &.expanded {
+      margin-left: -280px ;
+    }
 
     > div {
         height: 4000px;
@@ -41,6 +42,7 @@ export const Container = styled.div<Props>`
     ::-webkit-scrollbar-thumb:hover{
         background-color: rgba(255,255,255,0.2);
     }
+    
   
 `;
 

@@ -7,11 +7,6 @@ import NavBar from './NavBar'
 import ContentArea from './ContentArea'
 import { AppContextProvider } from '../../contexts/ApplicationContext';
 
-export interface Props {
-    isOpened?: boolean
-}
-
-
 const Layout: React.FC = () => {
 
     return (

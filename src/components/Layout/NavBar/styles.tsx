@@ -9,8 +9,14 @@ export const Container = styled.div`
     justify-content: space-between;
     padding: 8px;  
     background-color: white;
-    width: 100%;
     height: 64px;
+    margin-left: 0px;
+
+    transition: margin-left 0.2s;
+    
+    &.expanded {
+      margin-left: -280px ;
+    }
 `;
 
 export const LeftBar = styled.div`

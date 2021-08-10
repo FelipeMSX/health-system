@@ -22,12 +22,12 @@ const NavBar: React.FC<Props> = ({
     const {isSideBarExpanded, setSideBarVisibilty} = UseAppContext();
     
     return (
-        <Container >
+        <Container className={isSideBarExpanded ? "" : "expanded"} >
             <LeftBar>
                 <ToggleableItem isOpened ={!isSideBarExpanded}>
-                    <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'}/>
-
+                    <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'} onClick={() => setSideBarVisibilty(true)}/>
                 </ToggleableItem>
+                <IconButton iconColor={'black'} color={'red'} hoverColor={'var(--lightgray)'}/>
             </LeftBar>
             <RightBar>
                 <UserInfo>

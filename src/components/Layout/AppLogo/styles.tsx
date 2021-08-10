@@ -4,6 +4,7 @@ import { Props } from '.';
 
 export const Container = styled.div<Props>`
     grid-area: AN;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -11,8 +12,12 @@ export const Container = styled.div<Props>`
     background-color: var(--primary);
     width: 280px;
     height: 64px;
-    display: ${(props) => props.isOpened ? 'flex' : 'none' };
-
+    margin-left: 0;
+    transition: margin-left 0.2s;
+    
+    &.expanded {
+      margin-left: -280px ;
+    }
 `;
 
 export const LeftContainer= styled.div`
