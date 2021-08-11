@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import TextBox from '../../TextBox';
-import HealthAgentService from '../../../services/HealthAgentService';
 
 import {
     Container,
@@ -19,7 +17,8 @@ import {
 } from './styles';
 import SimpleTabs from './tabtest';
 import { useEffect } from 'react';
-import HealthAgentModel from '../../../model/HealthAgentModel';
+import HealthAgentService from '../../services/HealthAgentService';
+import HealthAgentModel from '../../model/HealthAgentModel';
 
 
 const HealthAgent: React.FC = () => {

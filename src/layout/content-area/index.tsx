@@ -1,8 +1,8 @@
 import React from "react";
+import { UseAppContext } from "../../contexts/ApplicationContext";
 
+import Routes from "../../Routes";
 import { Container } from "./styles";
-import Routes from "../../../Routes";
-import { UseAppContext } from "../../../contexts/ApplicationContext";
 
 
 const ContentArea: React.FC = () => {

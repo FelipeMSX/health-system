@@ -13,8 +13,8 @@ import {
 } from "./styles";
 
 import { Link } from 'react-router-dom';
-import AppLogo from "../AppLogo";
-import { UseAppContext } from "../../../contexts/ApplicationContext";
+import AppLogo from "../app-logo";
+import { UseAppContext } from "../../contexts/ApplicationContext";
 
 
 export interface Props {

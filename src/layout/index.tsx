@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
+import AppLogo from './app-logo';
+import SideBar from './side-bar';
+import NavBar from './navigation-bar'
+import ContentArea from './content-area'
 import { Grid } from './styles';
-import AppLogo from './AppLogo';
-import SideBar from './SideBar';
-import NavBar from './NavBar'
-import ContentArea from './ContentArea'
-import { AppContextProvider } from '../../contexts/ApplicationContext';
+import { AppContextProvider } from '../contexts/ApplicationContext';
 
 const Layout: React.FC = () => {
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
+import { Home } from 'styled-icons/boxicons-regular';
+import HealthAgent from './pages/health-agent';
+import HealthAgentInsert from './pages/health-agent/Insert';
+import Street from './pages/street';
 
-import HealthAgent from './components/Pages/HealthAgent';
-import HealthAgentInsert from './components/Pages/HealthAgent/Insert';
-import Street from './components/Pages/Street';
-import Home from './components/Pages/Homes';
 
 const Routes: React.FC = () => {
     return (

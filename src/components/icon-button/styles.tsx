@@ -1,7 +1,4 @@
 import styled from "styled-components";
-
-import { MenuOpen } from '@styled-icons/material-rounded/MenuOpen';
-
 import { Props } from '.';
 
 
@@ -26,13 +23,27 @@ export const Button = styled.button<Props>`
         background-color: ${(props) => props.hoverColor || 'var(--tertiary)' };
     }
 
+    svg > {
+     width: 20px;
+     height: 20px;
+     color: ${(props) => props.iconColor || 'var(--white)' };
+     opacity:  .7;
+     color: var(--white);
+    }
+
+    div > {
+        background-color: red;
+        width: 20px;
+        height: 20px;
+    }
+
 `;
 
-export const MenuOpenIcon = styled(MenuOpen)<Props>`
-    width: 20px;
-    height: 20px;
-    color: ${(props) => props.iconColor || 'var(--white)' };
-    opacity:  .7;
-    /* color: var(--white); */
+// export const MenuOpenIcon = styled(MenuOpen)<Props>`
+//     width: 20px;
+//     height: 20px;
+//     color: ${(props) => props.iconColor || 'var(--white)' };
+//     opacity:  .7;
+//     /* color: var(--white); */
 
-`;
+// `;

@@ -1,4 +1,6 @@
 import React from "react";
+import IconButton from "../../components/icon-button";
+import { UseAppContext } from "../../contexts/ApplicationContext";
 
 import { 
     Container, 
@@ -9,8 +11,6 @@ import {
     ToggleableItem
 } from "./styles";
 
-import  IconButton from '../../IconButton';
-import { UseAppContext } from "../../../contexts/ApplicationContext";
 
 export interface Props {
     isOpened?: boolean

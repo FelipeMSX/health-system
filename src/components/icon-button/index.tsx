@@ -1,12 +1,13 @@
 import { ChangeEventHandler, EventHandler } from 'react';
 import styled from 'styled-components';
-
-import { Button, MenuOpenIcon} from './styles'; 
+import Icon from '@material-ui/core/Icon'
+import { Button} from './styles'; 
 
 export interface Props {
     color?: string,
     hoverColor?: string,
     iconColor?: string,
+    icon?:;
     onClick?: () => void;
 }
 
@@ -24,11 +25,7 @@ const IconButton: React.FC<Props> = ({
             color={color}
             hoverColor={hoverColor}
             onClick={handleOnClick}
-        >
-            <MenuOpenIcon iconColor={iconColor} >
-
-            </MenuOpenIcon>
-        </Button>
+            iconColor={iconColor}></Button>
     )
 };
 

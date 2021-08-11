@@ -1,6 +1,4 @@
 import React, { ChangeEvent, useState } from 'react';
-import TextBox from '../../../TextBox';
-import HealthAgentService from '../../../../services/HealthAgentService'
 
 import {
     Container,
@@ -18,7 +16,9 @@ import {
     ButtonSave
 } from './styles';
 import { useEffect } from 'react';
-import HealthAgentModel from '../../../../model/HealthAgentModel';
+import HealthAgentModel from '../../../model/HealthAgentModel';
+import HealthAgentService from '../../../services/HealthAgentService';
+import TextBox from '../../../components/TextBox';
 
 
 const HealthAgentInsert: React.FC = () => {
