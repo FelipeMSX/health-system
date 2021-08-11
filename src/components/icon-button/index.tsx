@@ -7,7 +7,7 @@ export interface Props {
     color?: string,
     hoverColor?: string,
     iconColor?: string,
-    icon?:;
+    icon?: string,
     onClick?: () => void;
 }
 

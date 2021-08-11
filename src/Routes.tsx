@@ -1,8 +1,8 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import { Home } from 'styled-icons/boxicons-regular';
 import HealthAgent from './pages/health-agent';
 import HealthAgentInsert from './pages/health-agent/Insert';
+import Home from './pages/homes';
 import Street from './pages/street';
 
 

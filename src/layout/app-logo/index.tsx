@@ -26,11 +26,7 @@ const AppLogo: React.FC<Props> = ({
                 <span>Health</span>
             </LeftContainer>
             <IconButton onClick={() => setSideBarVisibilty(false)}>
-             <MenuOpenIcon/>
-             <div>teste</div>
             </IconButton>
-            <MenuOpenIcon/>
-
         </Container>
     )
 };

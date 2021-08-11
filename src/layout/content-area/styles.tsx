@@ -11,7 +11,6 @@ export const Container = styled.div`
     margin-left: 0px;
 
     transition: margin-left 0.2s;
-
     &.expanded {
       margin-left: -280px ;
     }
