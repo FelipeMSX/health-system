@@ -25,7 +25,7 @@ const AppLogo: React.FC<Props> = ({
                 <img src='logo192.png'></img>
                 <span>Health</span>
             </LeftContainer>
-            <IconButton onClick={() => setSideBarVisibilty(false)}>
+            <IconButton icon="menu_open"  onClick={() => setSideBarVisibilty(false)}>
             </IconButton>
         </Container>
     )

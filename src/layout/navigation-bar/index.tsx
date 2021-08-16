@@ -25,7 +25,7 @@ const NavBar: React.FC<Props> = ({
         <Container className={isSideBarExpanded ? "" : "expanded"} >
             <LeftBar>
                 <ToggleableItem isOpened ={!isSideBarExpanded}>
-                    <IconButton iconColor={'black'} color={'white'} hoverColor={'var(--lightgray)'} onClick={() => setSideBarVisibilty(true)}/>
+                     <IconButton icon="menu_open" iconColor={'black'} hoverColor={'var(--lightgray)'} color="white" onClick={() => setSideBarVisibilty(true)}/>
                 </ToggleableItem>
                 <IconButton iconColor={'black'} color={'red'} hoverColor={'var(--lightgray)'}/>
             </LeftBar>

@@ -1,7 +1,5 @@
-import { ChangeEventHandler, EventHandler } from 'react';
-import styled from 'styled-components';
-import Icon from '@material-ui/core/Icon'
 import { Button} from './styles'; 
+import DynamicIcon from '../dynamic-icon';
 
 export interface Props {
     color?: string,
@@ -15,6 +13,7 @@ const IconButton: React.FC<Props> = ({
     color,
     iconColor,
     hoverColor,
+    icon,
     onClick
 }) => {
     const handleOnClick = () => {
@@ -25,7 +24,9 @@ const IconButton: React.FC<Props> = ({
             color={color}
             hoverColor={hoverColor}
             onClick={handleOnClick}
-            iconColor={iconColor}></Button>
+            iconColor={iconColor}>
+            <DynamicIcon iconName={icon} iconColor={iconColor}/>
+        </Button>
     )
 };
 
