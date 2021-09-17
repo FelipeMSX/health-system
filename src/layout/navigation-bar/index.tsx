@@ -1,6 +1,8 @@
 import React from "react";
-import IconButton from "../../components/icon-button";
+// import IconButton from "../../components/icon-button";
+import IconButton from "@mui/material/IconButton";
 import { UseAppContext } from "../../contexts/application-context";
+import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 
 import { Container, LeftBar, RightBar, UserInfo, UserLabel, ToggleableItem } from "./styles";
 
@@ -14,16 +16,15 @@ const NavBar: React.FC<Props> = ({ isOpened }) => {
   return (
     <Container className={isSideBarExpanded ? "" : "expanded"}>
       <LeftBar>
-        <ToggleableItem isOpened={!isSideBarExpanded}>
-          <IconButton
-            icon="menu_open"
-            iconColor={"black"}
-            hoverColor={"var(--lightgray)"}
-            color="white"
-            onClick={() => setSideBarVisibilty(true)}
-          />
+        <ToggleableItem isOpened={true}>
+          <div>
+            <IconButton onClick={() => setSideBarVisibilty(true)}>
+              <MenuOpenRoundedIcon />
+            </IconButton>
+          </div>
         </ToggleableItem>
-        <IconButton iconColor={"black"} color={"red"} hoverColor={"var(--lightgray)"} />
+
+        {/* <IconButton iconColor={"black"} color={"red"} hoverColor={"var(--lightgray)"} /> */}
       </LeftBar>
       <RightBar>
         <UserInfo>

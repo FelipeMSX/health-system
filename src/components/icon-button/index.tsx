@@ -1,23 +1,26 @@
-import { Button } from "./styles";
-import DynamicIcon from "../dynamic-icon";
-
+import { StyledButton } from "./styles";
 export interface Props {
-  color?: string;
+  backgroundColor?: string;
   hoverColor?: string;
   iconColor?: string;
-  icon?: string;
   onClick?: () => void;
 }
 
-const IconButton: React.FC<Props> = ({ color, iconColor, hoverColor, icon, onClick }) => {
+const StyledMaterialButton: React.FC<Props> = ({ backgroundColor, iconColor, hoverColor, onClick }) => {
   const handleOnClick = () => {
     onClick?.();
   };
   return (
-    <Button color={color} hoverColor={hoverColor} onClick={handleOnClick} iconColor={iconColor}>
-      <DynamicIcon iconName={icon} iconColor={iconColor} />
-    </Button>
+    <>
+      <StyledButton
+        backgroundColor={backgroundColor}
+        hoverColor={hoverColor}
+        onClick={handleOnClick}
+        iconColor={iconColor}
+        color="primary"
+      />
+    </>
   );
 };
 
-export default IconButton;
+export default StyledMaterialButton;

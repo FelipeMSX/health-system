@@ -3,8 +3,9 @@ import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 
 import { Container, LeftContainer } from "./styles";
 import { UseAppContext } from "../../contexts/application-context";
-import IconButton from "../../components/icon-button";
+import IconButton from "@mui/material/IconButton";
 import styled from "styled-components";
+import StyledMaterialButton from "../../components/icon-button";
 
 export interface Props {
   isOpened?: boolean;
@@ -19,7 +20,12 @@ const AppLogo: React.FC<Props> = ({ isOpened }) => {
         <img src="logo192.png"></img>
         <span>Health</span>
       </LeftContainer>
-      <IconButton icon="menu_open" onClick={() => setSideBarVisibilty(false)}></IconButton>
+      {/* <IconButton onClick={() => setSideBarVisibilty(false)} color="primary"> */}
+      <StyledMaterialButton>
+        <MenuOpenRoundedIcon />
+      </StyledMaterialButton>
+
+      {/* </IconButton> */}
     </Container>
   );
 };
