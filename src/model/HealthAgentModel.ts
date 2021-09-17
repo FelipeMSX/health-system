@@ -1,12 +1,11 @@
 interface HealthAgentModel {
+  id: number;
 
-    id: number;
+  firstName: string;
 
-    firstName: string;
+  fullName: string;
 
-    fullName: string;
-
-    age: number;
+  age: number;
 }
 
 export default HealthAgentModel;

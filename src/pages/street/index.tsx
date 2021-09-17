@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Street: React.FC = () => {
-    return (
+  return (
     <>
-    <h1>Cadastro de rua</h1>
+      <h1>Cadastro de rua</h1>
     </>
-    )
+  );
 };
 
 export default Street;
