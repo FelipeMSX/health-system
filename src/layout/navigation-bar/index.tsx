@@ -1,6 +1,6 @@
 import React from "react";
 import IconButton from "../../components/icon-button";
-import { UseAppContext } from "../../contexts/ApplicationContext";
+import { UseAppContext } from "../../contexts/application-context";
 
 import { Container, LeftBar, RightBar, UserInfo, UserLabel, ToggleableItem } from "./styles";
 

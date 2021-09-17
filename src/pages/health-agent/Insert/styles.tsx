@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ArrowBack } from "@styled-icons/boxicons-regular/ArrowBack";
+import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 export const Container = styled.div`
   display: flex;
@@ -114,7 +114,7 @@ export const PageNameItem = styled.div`
   }
 `;
 
-export const ArrowBackIcon = styled(ArrowBack)`
+export const ArrowBackIcon = styled(ArrowBackRoundedIcon)`
   width: 20px;
   height: 20px;
   color: var(--white);

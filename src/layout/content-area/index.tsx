@@ -1,5 +1,5 @@
 import React from "react";
-import { UseAppContext } from "../../contexts/ApplicationContext";
+import { UseAppContext } from "../../contexts/application-context";
 
 import Routes from "../../Routes";
 import { Container } from "./styles";

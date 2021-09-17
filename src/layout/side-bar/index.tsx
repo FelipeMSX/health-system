@@ -14,7 +14,7 @@ import {
 
 import { Link } from "react-router-dom";
 import AppLogo from "../app-logo";
-import { UseAppContext } from "../../contexts/ApplicationContext";
+import { UseAppContext } from "../../contexts/application-context";
 
 export interface Props {
   isOpened?: boolean;

@@ -1,4 +1,4 @@
-import HealthAgentModel from "../model/HealthAgentModel";
+import HealthAgentModel from "../model/health-agent-model";
 import api from "./api";
 
 class HealthAgentService {

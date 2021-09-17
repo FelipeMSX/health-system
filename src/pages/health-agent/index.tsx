@@ -17,8 +17,8 @@ import {
 } from "./styles";
 import SimpleTabs from "./tabtest";
 import { useEffect } from "react";
-import HealthAgentService from "../../services/HealthAgentService";
-import HealthAgentModel from "../../model/HealthAgentModel";
+import HealthAgentService from "../../services/health-agent-service";
+import HealthAgentModel from "../../model/health-agent-model";
 
 const HealthAgent: React.FC = () => {
   const [dataTest, setData] = useState<HealthAgentModel[]>([]);

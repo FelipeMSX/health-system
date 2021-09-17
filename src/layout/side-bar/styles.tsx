@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PersonPlusFill } from "@styled-icons/bootstrap/PersonPlusFill";
+import PersonAddAlt1RoundedIcon from "@mui/icons-material/PersonAddAlt1Rounded";
 
 import { Props } from ".";
 
@@ -126,7 +126,7 @@ export const LinkInfo = styled.div`
   }
 `;
 
-export const PersonIcon = styled(PersonPlusFill)`
+export const PersonIcon = styled(PersonAddAlt1RoundedIcon)`
   width: 20px;
   height: 20px;
   color: var(--white);

@@ -16,9 +16,9 @@ import {
   ButtonSave,
 } from "./styles";
 import { useEffect } from "react";
-import HealthAgentModel from "../../../model/HealthAgentModel";
-import HealthAgentService from "../../../services/HealthAgentService";
-import TextBox from "../../../components/TextBox";
+import HealthAgentModel from "../../../model/health-agent-model";
+import HealthAgentService from "../../../services/health-agent-service";
+import TextBox from "../../../components/text-box";
 
 const HealthAgentInsert: React.FC = () => {
   const [model, setModel] = useState<HealthAgentModel>({

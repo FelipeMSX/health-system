@@ -5,7 +5,7 @@ import SideBar from "./side-bar";
 import NavBar from "./navigation-bar";
 import ContentArea from "./content-area";
 import { Grid } from "./styles";
-import { AppContextProvider } from "../contexts/ApplicationContext";
+import { AppContextProvider } from "../contexts/application-context";
 
 const Layout: React.FC = () => {
   return (

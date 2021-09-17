@@ -1,8 +1,8 @@
 import React from "react";
-import { MenuOpen } from "@styled-icons/material-rounded/MenuOpen";
+import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 
 import { Container, LeftContainer } from "./styles";
-import { UseAppContext } from "../../contexts/ApplicationContext";
+import { UseAppContext } from "../../contexts/application-context";
 import IconButton from "../../components/icon-button";
 import styled from "styled-components";
 
@@ -26,7 +26,7 @@ const AppLogo: React.FC<Props> = ({ isOpened }) => {
 
 export default AppLogo;
 
-export const MenuOpenIcon = styled(MenuOpen)<Props>`
+export const MenuOpenIcon = styled(MenuOpenRoundedIcon)<Props>`
   width: 20px;
   height: 20px;
   color: "var(--white)";
