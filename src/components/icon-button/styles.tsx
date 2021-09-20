@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { Props } from ".";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import styled from "@mui/styled-engine";
 
 export const StyledButton = styled(IconButton)<Props & IconButtonProps>`
   display: flex;

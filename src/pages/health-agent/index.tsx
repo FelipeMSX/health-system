@@ -15,7 +15,6 @@ import {
   PageNameItem,
   ButtonSave,
 } from "./styles";
-import SimpleTabs from "./tabtest";
 import { useEffect } from "react";
 import HealthAgentService from "../../services/health-agent-service";
 import HealthAgentModel from "../../model/health-agent-model";

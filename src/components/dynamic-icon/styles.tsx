@@ -1,4 +1,4 @@
-import Icon from "@material-ui/core/Icon";
+import { Icon } from "@mui/material";
 import styled from "styled-components";
 import { Props } from ".";
 
