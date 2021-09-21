@@ -21,6 +21,8 @@ import HealthAgentService from "../../../services/health-agent-service";
 import TextBox from "../../../components/text-box";
 import { Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 
 const HealthAgentInsert: React.FC = () => {
   const [model, setModel] = useState<HealthAgentModel>({
@@ -78,20 +80,6 @@ const HealthAgentInsert: React.FC = () => {
                 type="text"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
               ></TextBox>
-              <TextBox
-                name="fullName"
-                labelName="Nome Completo"
-                required={true}
-                type="text"
-                onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-              ></TextBox>
-              <TextBox
-                name="age"
-                labelName="Idade"
-                type="number"
-                onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-              ></TextBox>
-
               <Button size="large" shape="circle" icon={<SearchOutlined />} />
             </MainArea>
           </Content>

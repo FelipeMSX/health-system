@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 
-import { Props } from ".";
-
-export const Container = styled.div<Props>`
+export const Container = styled.div`
   grid-area: AL;
   padding-top: 24px;
   background-color: var(--primary);

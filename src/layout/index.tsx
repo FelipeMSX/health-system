@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import AppLogo from "./app-logo";
+import AppLogo from "./side-bar/app-logo";
 import SideBar from "./side-bar";
 import NavBar from "./navigation-bar";
 import ContentArea from "./content-area";

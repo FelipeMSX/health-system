@@ -1,14 +1,14 @@
 import React from "react";
-import { UseAppContext } from "../../contexts/application-context";
-
+import { useSelector } from "react-redux";
 import Routes from "../../Routes";
+import { RootState } from "../../store/store";
 import { Container } from "./styles";
 
 const ContentArea: React.FC = () => {
-  const { isSideBarExpanded, setSideBarVisibilty } = UseAppContext();
+  const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
 
   return (
-    <Container className={isSideBarExpanded ? "" : "expanded"}>
+    <Container className={isOpened ? "" : "expanded"}>
       <Routes />
     </Container>
   );

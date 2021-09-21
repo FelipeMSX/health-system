@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Props } from ".";
 
-export const Container = styled.div<Props>`
+export const Container = styled.div`
   grid-area: AN;
   display: flex;
   flex-direction: row;

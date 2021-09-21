@@ -5,24 +5,24 @@ import { UseAppContext } from "../../contexts/application-context";
 
 import { Container, LeftBar, RightBar, UserInfo, UserLabel, ToggleableItem } from "./styles";
 import { MenuFoldOutlined } from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { open } from "../../store/slices/sidebar-slice";
 
-export interface Props {
-  isOpened?: boolean;
-}
-
-const NavBar: React.FC<Props> = ({ isOpened }) => {
-  const { isSideBarExpanded, setSideBarVisibilty } = UseAppContext();
+const NavBar: React.FC = () => {
+  const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
+  const dispatch = useDispatch();
 
   return (
-    <Container className={isSideBarExpanded ? "" : "expanded"}>
+    <Container className={isOpened ? "" : "expanded"}>
       <LeftBar>
-        <ToggleableItem isOpened={!isSideBarExpanded}>
+        <ToggleableItem isOpened={!isOpened}>
           <Button
             className="secondary"
             size="large"
             shape="circle"
             icon={<MenuFoldOutlined />}
-            onClick={() => setSideBarVisibilty(!isSideBarExpanded)}
+            onClick={() => dispatch(open())}
           />
         </ToggleableItem>
       </LeftBar>

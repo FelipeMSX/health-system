@@ -1,32 +1,19 @@
 import React, { useState } from "react";
 
-import {
-  Container,
-  UserData,
-  UserPicture,
-  LinkContent,
-  Title,
-  GroupLink,
-  DirectLink,
-  LinkInfo,
-  PersonIcon,
-} from "./styles";
+import { Container, UserData, UserPicture, LinkContent, Title, DirectLink, LinkInfo, PersonIcon } from "./styles";
 
 import { Link } from "react-router-dom";
-import AppLogo from "../app-logo";
-import { UseAppContext } from "../../contexts/application-context";
+import AppLogo from "./app-logo";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
-export interface Props {
-  isOpened?: boolean;
-}
-
-const SideBar: React.FC<Props> = () => {
-  const { isSideBarExpanded, setSideBarVisibilty } = UseAppContext();
+const SideBar: React.FC = () => {
+  const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
 
   return (
     <>
       <AppLogo></AppLogo>
-      <Container className={isSideBarExpanded ? "" : "expanded"}>
+      <Container className={isOpened ? "" : "expanded"}>
         <UserData>
           <h1>Felipe Morais</h1>
           <span>felipeprodev@gmail.com</span>
@@ -72,7 +59,6 @@ const SideBar: React.FC<Props> = () => {
             </LinkInfo>
           </DirectLink>
         </LinkContent>
-        <button onClick={() => setSideBarVisibilty(false)}> Teste</button>
       </Container>
     </>
   );

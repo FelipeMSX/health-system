@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Props } from ".";
 
 export const Container = styled.div`
   grid-area: TB;
@@ -23,7 +22,7 @@ export const LeftBar = styled.div`
   display: flex;
 `;
 
-export const ToggleableItem = styled.div<Props>`
+export const ToggleableItem = styled.div<{ isOpened: boolean }>`
   display: ${(props) => (props.isOpened ? "flex" : "none")};
 `;
 
