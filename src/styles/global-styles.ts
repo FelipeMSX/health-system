@@ -17,6 +17,9 @@ export default createGlobalStyle`
 
         font-family: 'Poppins','Roboto', sans-serif
     }
+    h1, h2, h3, h4, h5 {
+        color: white;
+    }
 
 
     button {

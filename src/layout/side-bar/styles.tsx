@@ -16,6 +16,37 @@ export const Container = styled.div`
     margin-left: -280px;
   }
 
+  .pro-sidebar {
+    width: 100%;
+  }
+
+  .pro-sidebar-inner {
+    background: inherit;
+  }
+  .pro-sidebar .pro-menu.shaped .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
+    background: transparent;
+  }
+  .pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item {
+    background: inherit;
+  }
+
+  .pro-inner-list-item > div > ul {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .pro-inner-item {
+    padding: 3px 5px !important;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    margin: 3px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    &:hover {
+      background-color: var(--quaternary);
+    }
+  }
+
   > div {
     height: 4000px;
   }
@@ -92,7 +123,6 @@ export const LinkContent = styled.div`
   flex-direction: column;
   width: 280px;
   height: 100vh;
-  padding: 8px 12px;
   background-color: var(--secondary);
 `;
 
@@ -106,7 +136,7 @@ export const Title = styled.div`
   align-items: center;
 
   > h1 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;

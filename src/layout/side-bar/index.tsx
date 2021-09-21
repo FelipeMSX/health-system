@@ -7,6 +7,10 @@ import AppLogo from "./app-logo";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 
+import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import "react-pro-sidebar/dist/css/styles.css";
+import { FaGem, FaHeart } from "react-icons/fa";
+
 const SideBar: React.FC = () => {
   const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
 
@@ -23,34 +27,20 @@ const SideBar: React.FC = () => {
         </UserData>
         <LinkContent>
           <Title>
-            <h1>Applications</h1>
+            <h1>Aplicação</h1>
           </Title>
-          <DirectLink>
-            <LinkInfo>
-              <Link to="/health-agent" style={{ textDecoration: "none" }}>
-                <PersonIcon />
-                <span>Agente de Saúde Lis</span>
-              </Link>
-            </LinkInfo>
-          </DirectLink>
-
-          <DirectLink>
-            <LinkInfo>
-              <Link to="/health-agent/create" style={{ textDecoration: "none" }}>
-                <PersonIcon />
-                <span>Agente de Saúde Cas</span>
-              </Link>
-            </LinkInfo>
-          </DirectLink>
-
-          <DirectLink>
-            <LinkInfo>
-              <Link to="/street" style={{ textDecoration: "none" }}>
-                <PersonIcon />
-                <span>Rua</span>
-              </Link>
-            </LinkInfo>
-          </DirectLink>
+          <ProSidebar>
+            <Menu>
+              <MenuItem icon={<FaGem />}>
+                Agente de Saúde
+                <Link to="/health-agent" />
+              </MenuItem>
+              <SubMenu title="Components" icon={<FaHeart />}>
+                <MenuItem>Component 1</MenuItem>
+                <MenuItem>Component 2</MenuItem>
+              </SubMenu>
+            </Menu>
+          </ProSidebar>
         </LinkContent>
       </Container>
     </>
