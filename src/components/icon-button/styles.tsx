@@ -1,8 +1,8 @@
 import { Props } from ".";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
-import styled from "@mui/styled-engine";
+import styled from "styled-components";
+import { Button } from "antd";
 
-export const StyledButton = styled(IconButton)<Props & IconButtonProps>`
+export const StyledButton = styled(Button)<Props>`
   display: flex;
   width: 40px;
   height: 40px;

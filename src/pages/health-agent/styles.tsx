@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 export const Container = styled.div`
   display: flex;
@@ -114,7 +114,7 @@ export const PageNameItem = styled.div`
   }
 `;
 
-export const ArrowBackIcon = styled(ArrowBackRoundedIcon)`
+export const ArrowBackIcon = styled(ArrowLeftOutlined)`
   width: 20px;
   height: 20px;
   color: var(--white);

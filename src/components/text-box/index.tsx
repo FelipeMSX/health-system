@@ -1,6 +1,5 @@
-import TextField from "@mui/material/TextField";
 import React, { ChangeEventHandler } from "react";
-
+import { Input } from "antd";
 import { Container } from "./styles";
 export interface Props {
   labelName: string;
@@ -13,15 +12,7 @@ export interface Props {
 const TextBox: React.FC<Props> = ({ labelName, required, type, name, onChange }) => {
   return (
     <Container>
-      <TextField
-        id="outlined-basic"
-        variant="outlined"
-        required={required}
-        label={labelName}
-        type={type}
-        name={name}
-        onChange={onChange}
-      />
+      <Input id="outlined-basic" required={required} type={type} name={name} onChange={onChange} />
     </Container>
   );
 };

@@ -1,10 +1,10 @@
+import { Button } from "antd";
 import React from "react";
 // import IconButton from "../../components/icon-button";
-import IconButton from "@mui/material/IconButton";
 import { UseAppContext } from "../../contexts/application-context";
-import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 
 import { Container, LeftBar, RightBar, UserInfo, UserLabel, ToggleableItem } from "./styles";
+import { MenuFoldOutlined } from "@ant-design/icons";
 
 export interface Props {
   isOpened?: boolean;
@@ -16,15 +16,15 @@ const NavBar: React.FC<Props> = ({ isOpened }) => {
   return (
     <Container className={isSideBarExpanded ? "" : "expanded"}>
       <LeftBar>
-        <ToggleableItem isOpened={true}>
-          <div>
-            <IconButton onClick={() => setSideBarVisibilty(true)}>
-              <MenuOpenRoundedIcon />
-            </IconButton>
-          </div>
+        <ToggleableItem isOpened={!isSideBarExpanded}>
+          <Button
+            className="secondary"
+            size="large"
+            shape="circle"
+            icon={<MenuFoldOutlined />}
+            onClick={() => setSideBarVisibilty(!isSideBarExpanded)}
+          />
         </ToggleableItem>
-
-        {/* <IconButton iconColor={"black"} color={"red"} hoverColor={"var(--lightgray)"} /> */}
       </LeftBar>
       <RightBar>
         <UserInfo>

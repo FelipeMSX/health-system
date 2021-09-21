@@ -19,6 +19,8 @@ import { useEffect } from "react";
 import HealthAgentModel from "../../../model/health-agent-model";
 import HealthAgentService from "../../../services/health-agent-service";
 import TextBox from "../../../components/text-box";
+import { Button } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 
 const HealthAgentInsert: React.FC = () => {
   const [model, setModel] = useState<HealthAgentModel>({
@@ -88,6 +90,8 @@ const HealthAgentInsert: React.FC = () => {
                 type="number"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
               ></TextBox>
+
+              <Button size="large" shape="circle" icon={<SearchOutlined />} />
             </MainArea>
           </Content>
         </InnerContainer>

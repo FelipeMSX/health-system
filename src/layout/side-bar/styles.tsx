@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import PersonAddAlt1RoundedIcon from "@mui/icons-material/PersonAddAlt1Rounded";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 import { Props } from ".";
 
@@ -126,7 +126,7 @@ export const LinkInfo = styled.div`
   }
 `;
 
-export const PersonIcon = styled(PersonAddAlt1RoundedIcon)`
+export const PersonIcon = styled(ArrowLeftOutlined)`
   width: 20px;
   height: 20px;
   color: var(--white);
