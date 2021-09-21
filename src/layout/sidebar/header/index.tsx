@@ -7,7 +7,7 @@ import { close } from "../../../store/slices/sidebar-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { Content, Container } from "./styles";
 
-const AppLogo: React.FC = () => {
+const Header: React.FC = () => {
   const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
   const dispatch = useDispatch();
 
@@ -28,4 +28,4 @@ const AppLogo: React.FC = () => {
   );
 };
 
-export default AppLogo;
+export default Header;

@@ -1,30 +1,24 @@
 import React, { useState } from "react";
 
-import { Container, UserData, UserPicture, LinkContent, Title, DirectLink, LinkInfo, PersonIcon } from "./styles";
-
 import { Link } from "react-router-dom";
-import AppLogo from "./app-logo";
+import Header from "./header";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { FaGem, FaHeart } from "react-icons/fa";
+import UserArea from "./user-area/user-area";
+import { Container, LinkContent, Title } from "./styles";
 
 const SideBar: React.FC = () => {
   const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
 
   return (
     <>
-      <AppLogo></AppLogo>
+      <Header></Header>
       <Container className={isOpened ? "" : "expanded"}>
-        <UserData>
-          <h1>Felipe Morais</h1>
-          <span>felipeprodev@gmail.com</span>
-          <UserPicture>
-            <img src="UserPicture.jpg"></img>
-          </UserPicture>
-        </UserData>
+        <UserArea />
         <LinkContent>
           <Title>
             <h1>Aplicação</h1>

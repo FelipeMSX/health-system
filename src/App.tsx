@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalStyles from "./styles/global-styles";
 import { BrowserRouter } from "react-router-dom";
-import Layout from "./layout";
+import Layout from "./layout/layout-index";
 import "antd/dist/antd.css";
 
 function App() {
