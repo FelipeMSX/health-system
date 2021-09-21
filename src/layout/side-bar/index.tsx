@@ -25,13 +25,6 @@ const SideBar: React.FC = () => {
           <Title>
             <h1>Applications</h1>
           </Title>
-          {/* <GroupLink>
-                    <ul>
-                        <li>primeiro item</li>
-                        <li>segundo item</li>
-                        <li>terceiro item</li>
-                    </ul>
-                </GroupLink> */}
           <DirectLink>
             <LinkInfo>
               <Link to="/health-agent" style={{ textDecoration: "none" }}>

@@ -1,21 +1,22 @@
 import React from "react";
 
-import { Container, LeftContainer } from "./styles";
 import { MenuFoldOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { RootState } from "../../../store/store";
 import { close } from "../../../store/slices/sidebar-slice";
 import { useDispatch, useSelector } from "react-redux";
+import { Content, Container } from "./styles";
 
 const AppLogo: React.FC = () => {
   const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
   const dispatch = useDispatch();
+
   return (
     <Container className={isOpened ? "" : "expanded"}>
-      <LeftContainer>
+      <Content>
         <img src="logo192.png"></img>
         <span>Health</span>
-      </LeftContainer>
+      </Content>
       <Button
         className="primary"
         shape="circle"
