@@ -67,6 +67,7 @@ const HealthAgentInsert: React.FC = () => {
               </LabelArea>
               <ActionArea>
                 <ButtonSave type="submit">Salvar</ButtonSave>
+                <Button>Teste</Button>
               </ActionArea>
             </TopArea>
             <MainArea>
