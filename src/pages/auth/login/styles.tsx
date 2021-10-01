@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -20,6 +21,8 @@ export const MainArea = styled.div`
 `;
 
 export const LeftArea = styled.div`
+  background-color: white;
+
   display: flex;
   width: 480px;
   height: 100%;
@@ -64,4 +67,8 @@ export const RigthArea = styled.div`
   border-radius: 0px 30px 30px 0px;
 
   background: linear-gradient(to right, rgb(27, 35, 48) 0%, rgb(13, 17, 24) 100%);
+`;
+
+export const TextFieldMUI = styled(TextField)`
+  width: 100%;
 `;

@@ -1,6 +1,18 @@
 import { Button, Input } from "antd";
 import React from "react";
-import { Container, IconArea, LeftArea, LeftContentArea, MainArea, RecoverPassword, RigthArea } from "./styles";
+import {
+  Container,
+  IconArea,
+  LeftArea,
+  LeftContentArea,
+  MainArea,
+  RecoverPassword,
+  RigthArea,
+  TextFieldMUI,
+} from "./styles";
+import TextField from "@mui/material/TextField";
+import { theme } from "../../../styles/theme";
+import { ThemeProvider } from "@mui/system";
 
 const Login: React.FC = () => {
   return (
@@ -13,6 +25,7 @@ const Login: React.FC = () => {
               <span>Health</span>
             </IconArea>
             <Input placeholder="Usuário" size="large" />
+            <TextFieldMUI label="Usuário" />
             <Input placeholder="Senha" size="large" type="password" />
             <RecoverPassword>
               <a>Esqueceu sua senha?</a>
