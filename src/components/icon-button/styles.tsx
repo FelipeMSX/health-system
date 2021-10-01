@@ -15,7 +15,7 @@ export const StyledButton = styled(Button)<Props>`
 
   > svg {
     background-color: white;
-    color: red;
+    color: black;
     width: 20px;
     height: 20px;
   }

@@ -4,18 +4,19 @@ import Header from "./sidebar/header";
 import NavBar from "./navigation-bar";
 import ContentArea from "./content-area";
 import { Grid } from "./grid-style";
-import { AppContextProvider } from "../contexts/application-context";
 import SideBar from "./sidebar/sidebar";
+import Login from "../pages/auth/login";
 
 const Layout: React.FC = () => {
   return (
-    <AppContextProvider>
-      <Grid>
+    <>
+      <Login />
+      {/* <Grid>
         <SideBar />
         <NavBar />
         <ContentArea />
-      </Grid>
-    </AppContextProvider>
+      </Grid> */}
+    </>
   );
 };
 

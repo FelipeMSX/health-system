@@ -62,6 +62,7 @@ export default createGlobalStyle`
         --gray:#C0C2C5;
         --lightgray:#E2E2E2;
         --font-black:#111827;
+        --background-light: #f6f7f9
 
     }
 `;
