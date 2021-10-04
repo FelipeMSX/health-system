@@ -4,10 +4,10 @@ import { green, purple, common } from "@mui/material/colors";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: common.black,
+      main: "#252F3E",
     },
     secondary: {
-      main: green[500],
+      main: "#22D3EE",
     },
   },
 });

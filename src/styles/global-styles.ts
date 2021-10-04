@@ -20,38 +20,7 @@ export default createGlobalStyle`
     h1, h2, h3, h4, h5 {
         color: white;
     }
-
-
-    button {
-        border: 0 !important;
-        outline: 0;
-
-        font-family: 'Poppins','Roboto', sans-serif;
-
-        &.primary{
-        background-color: transparent !important;
-
-            svg {
-                color: white;
-            }
-            &:hover {
-                background-color: var(--secondary) !important;
-            }
-        }
-
-        &.secondary{
-        background-color: transparent !important;
-
-            svg { 
-                color: black;
-            }
-            &:hover {
-                background-color: var(--lightgray) !important;
-            }
-        }
-
-    }
-
+    
     :root{
         --primary: #1b2330;
         --secondary: #252f3e;

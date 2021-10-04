@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Login from "./pages/auth/login";
+import Login from "./pages/auth/login/_index";
 import HealthAgent from "./pages/health-agent";
 import HealthAgentInsert from "./pages/health-agent/Insert";
 import Home from "./pages/homes";
