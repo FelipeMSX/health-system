@@ -9,12 +9,11 @@ import Street from "./pages/street";
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home}></Route>
-      <Route exact path="/health-agent" component={HealthAgent}></Route>
-      <Route path="/health-agent/create" component={HealthAgentInsert}></Route>
-      <Route path="/street" component={Street}></Route>
-      <Route path="/auth/login" component={Login}></Route>
-      <Route></Route>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/health-agent" component={HealthAgent} />
+      <Route path="/health-agent/create" component={HealthAgentInsert} />
+      <Route path="/street" component={Street} />
+      <Route path="/auth/login" component={Login} />
     </Switch>
   );
 };

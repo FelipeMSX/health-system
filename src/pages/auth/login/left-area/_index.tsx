@@ -2,6 +2,7 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 import StyledRoundedButton from "../../../../components/rounded-button/rounded-button";
 import { LeftContentArea, Container, IconArea, RecoverPassword } from "./styles/_index";
+import { Button } from "@mui/material";
 
 const LeftAreaPage: React.FC = () => {
   return (

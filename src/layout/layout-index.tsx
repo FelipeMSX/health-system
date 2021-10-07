@@ -5,18 +5,21 @@ import NavBar from "./navigation-bar";
 import ContentArea from "./content-area";
 import { Grid } from "./grid-style";
 import SideBar from "./sidebar/sidebar";
-import Login from "../pages/auth/login/_index";
+import { UseAppContext } from "../context/app-context";
 
 const Layout: React.FC = () => {
+  const { isFullcreen } = UseAppContext();
+
   return (
     <>
-      {/* <Login /> */}
-      <Grid>
-        <SideBar />
-        <NavBar />
-        <ContentArea />
-        {/* <Login /> */}
-      </Grid>
+      {!isFullcreen && (
+        <Grid>
+          <SideBar />
+          <NavBar />
+          <ContentArea />
+        </Grid>
+      )}
+      {isFullcreen && <ContentArea />}
     </>
   );
 };

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   grid-area: CA;
-  display: flex;
   flex-direction: row;
   align-items: center;
   background-color: var(--primary);
@@ -15,3 +14,8 @@ export const Container = styled.div`
     margin-left: -280px;
   }
 `;
+
+// grid-template-areas:
+// "AN TB TB"
+// "AL CA CA";
+// `;

@@ -7,6 +7,8 @@ import { MenuFoldOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { open } from "../../store/slices/sidebar-slice";
+import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
+import { IconButton } from "@mui/material";
 
 const NavBar: React.FC = () => {
   const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
@@ -16,13 +18,9 @@ const NavBar: React.FC = () => {
     <Container className={isOpened ? "" : "expanded"}>
       <LeftBar>
         <ToggleableItem isOpened={!isOpened}>
-          <Button
-            className="secondary"
-            size="large"
-            shape="circle"
-            icon={<MenuFoldOutlined />}
-            onClick={() => dispatch(open())}
-          />
+          <IconButton color="secondary" onClick={() => dispatch(open())}>
+            <MenuOpenRoundedIcon />
+          </IconButton>
         </ToggleableItem>
       </LeftBar>
       <RightBar>

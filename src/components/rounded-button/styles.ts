@@ -1,4 +1,5 @@
-import { Button, styled } from "@mui/material";
+import { Button } from "@mui/material";
+import styled from "styled-components";
 
 export const RoundedButton = styled(Button)`
   height: 36.5px;

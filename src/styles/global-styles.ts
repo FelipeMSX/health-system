@@ -17,8 +17,12 @@ export default createGlobalStyle`
 
         font-family: 'Poppins','Roboto', sans-serif
     }
-    h1, h2, h3, h4, h5 {
+    h1, h2, h3, h4, h5, h6 {
         color: white;
+    }
+    p {
+        color: white;
+        margin-bottom: 0px;
     }
     
     :root{

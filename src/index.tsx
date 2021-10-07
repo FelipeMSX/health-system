@@ -5,11 +5,14 @@ import { store } from "./store/store";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./styles/theme";
+import { AppContextProvider } from "./context/app-context";
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <ThemeProvider theme={theme}>
-        <App />
+        <AppContextProvider>
+          <App />
+        </AppContextProvider>
       </ThemeProvider>
     </React.StrictMode>
   </Provider>,
