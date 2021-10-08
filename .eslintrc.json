@@ -10,6 +10,7 @@
     "no-unused-vars": "warn",
     "no-undef": "warn"
   },
+  "parser": "@typescript-eslint/parser",
 
   "extends": ["eslint:recommended", "prettier"]
 }

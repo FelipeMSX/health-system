@@ -5,7 +5,7 @@ import RightAreaPage from "./right-area/_index";
 import { UseAppContext } from "../../../context/app-context";
 
 const Login: React.FC = () => {
-  const { isFullcreen, setFullscreen } = UseAppContext();
+  const { setFullscreen } = UseAppContext();
 
   setFullscreen(true);
   return (

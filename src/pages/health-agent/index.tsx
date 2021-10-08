@@ -26,10 +26,14 @@ const HealthAgent: React.FC = () => {
   useEffect(() => {
     if (dataLoaded) return;
 
-    HealthAgentService.getAll().then((response) => {
-      setData(response.data);
-      console.log(response);
-    });
+    HealthAgentService.getAll()
+      .then((response) => {
+        // setData(response.data);
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     setDataLoaded(true);
   });
@@ -54,11 +58,11 @@ const HealthAgent: React.FC = () => {
             </LabelArea>
             <ActionArea></ActionArea>
           </TopArea>
-          <MainArea>
+          {/* <MainArea>
             {dataTest.map((postItem) => {
               return <li key={postItem.id}>{postItem.fullName}</li>;
             })}
-          </MainArea>
+          </MainArea> */}
         </Content>
       </InnerContainer>
     </Container>

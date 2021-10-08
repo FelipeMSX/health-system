@@ -10,6 +10,7 @@ const StyledRoundedButton: React.FC<ButtonProps & CustomButtonProps> = ({ labelT
   return (
     <>
       <RoundedButton
+        disabled={ButtonProps.disabled}
         fullWidth={ButtonProps.fullWidth}
         color={ButtonProps.color}
         variant={ButtonProps.variant}

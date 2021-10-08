@@ -10,4 +10,12 @@ export const LeftContentArea = styled.div`
   height: 100%;
   padding-top: 9.6rem;
   padding-bottom: 9.6rem;
+
+  form > div > div {
+    margin-bottom: 1.2rem;
+  }
+
+  form > button {
+    margin-top: 1.2rem;
+  }
 `;
