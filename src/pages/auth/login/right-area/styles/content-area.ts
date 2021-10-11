@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const ContentArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 24rem;
   width: 100%;
   height: 100%;

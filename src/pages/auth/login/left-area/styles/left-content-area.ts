@@ -17,5 +17,6 @@ export const LeftContentArea = styled.div`
 
   form > button {
     margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
   }
 `;
