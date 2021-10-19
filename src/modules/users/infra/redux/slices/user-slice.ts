@@ -22,6 +22,10 @@ export const userState = createSlice({
     login: (state) => {
       state.isLogged = true;
     },
+    getUserProfile: (state, action: PayloadAction<User>) => {
+      state.isLogged = true;
+      state.user = action.payload;
+    },
     // login: (state, action: PayloadAction<User>) => {
     //   state.isLogged = true;
     //   state.user = action.payload;
@@ -32,6 +36,6 @@ export const userState = createSlice({
   },
 });
 
-export const { login, authenticate } = userState.actions;
+export const { login, authenticate, getUserProfile } = userState.actions;
 
 export default userState.reducer;

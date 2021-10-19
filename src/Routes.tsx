@@ -10,7 +10,7 @@ import AuthenticatedRoute from "./shared/infra/authenticated-route";
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <AuthenticatedRoute exact path="/" component={Home} />
       <AuthenticatedRoute exact path="/health-agent" component={HealthAgent} />
       <AuthenticatedRoute path="/health-agent/create" component={HealthAgentInsert} />
       <AuthenticatedRoute path="/street" component={Street} />
