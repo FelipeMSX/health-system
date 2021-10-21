@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Header from "./sidebar/header";
-import NavBar from "./navigation-bar";
+import NavBar from "./navigation-bar/_index";
 import ContentArea from "./content-area";
 import { Grid } from "./grid-style";
 import SideBar from "./sidebar/sidebar";

@@ -16,13 +16,9 @@ const LeftAreaPage: React.FC = () => {
   const [password, setPassword] = useState("");
   const [isValidPassword, setIsValidPassword] = useState(false);
   const [isFetchingData, setIsFetchingData] = useState(false);
-
   const [userName, setUserName] = useState("");
-
   const [allInputsAreValids, setAllInputsAreValids] = useState(false);
-
   const isAuthenticated = useSelector((state: RootState) => state.user.isAuthenticated);
-
   const dispatch = useDispatch();
 
   const handleUserNameChanges = (input: string) => {

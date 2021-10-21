@@ -1,5 +1,4 @@
 import { Store } from "@reduxjs/toolkit";
-import { Console } from "console";
 import userService from "../modules/users/infra/adapters/services/user-service";
 import { authenticate, getUserProfile, login } from "../modules/users/infra/redux/slices/user-slice";
 
@@ -23,9 +22,10 @@ async function initialReduxStartupScript(store: Store): Promise<void> {
         store.dispatch(getUserProfile(response.value.getValue()));
         store.dispatch(authenticate());
         store.dispatch(login());
+      } else {
+        console.log("token problem");
       }
     }
-    console.log("token problem");
   }
   //@ts-ignore
 }

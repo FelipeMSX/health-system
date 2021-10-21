@@ -8,11 +8,13 @@ import { LoginDTO } from "../../modules/users/dtos/login-dto";
 export abstract class BaseAPI {
   //   private axiosInstance: AxiosInstance | any = null;
   private axiosInstance: AxiosInstance;
+  private baseURL: string;
 
   public authService: IAuthService;
 
   constructor(authService: IAuthService) {
     this.authService = authService;
+    this.baseURL = "http://localhost:3333/";
     this.axiosInstance = axios.create({
       baseURL: "http://localhost:3333/",
       headers: {
@@ -53,8 +55,8 @@ export abstract class BaseAPI {
   }
 
   private getErrorResponseHandler() {
-    return async (error: any) => {
-      console.log("Error intercepted");
+    return async (error: AxiosError) => {
+      console.log(JSON.stringify(error.config));
       if (this.didAccessTokenExpire(error)) {
         const refreshToken = this.authService.getToken("refresh-token");
         const hasRefreshToken = !!refreshToken;
@@ -84,19 +86,22 @@ export abstract class BaseAPI {
   protected get<T>(url: string, params?: any, headers?: any): Promise<AxiosResponse<T>> {
     return this.axiosInstance({
       method: "GET",
-      url: `${url}`,
+      url: `${this.baseURL}${url}`,
       params: params ? params : null,
       headers: headers ? headers : null,
     });
   }
 
   protected post<T>(url: string, data?: any, params?: any, headers?: any): Promise<AxiosResponse<T>> {
+    // return this.axiosInstance.post<T>(url, data ? data : null, headers ? { ...headers } : null);
+    console.log(headers);
+    console.log(data);
     return this.axiosInstance({
       method: "POST",
-      url: `${url}`,
-      data: data ? data : null,
-      params: params ? params : null,
-      headers: headers ? headers : null,
+      url: `${this.baseURL}${url}`,
+      data: data ? data : {},
+      params: params ? params : {},
+      headers: headers ? headers : {},
     });
   }
 }

@@ -6,5 +6,5 @@ export interface IUserService {
   getCurrentUserProfile(): Promise<APIResponse<User>>;
   // createUser (email: string, username: string, password: string): Promise<APIResponse<void>>;
   login(username: string, password: string): Promise<APIResponse<LoginDTO>>;
-  // logout (): Promise<APIResponse<void>>;
+  logout(): Promise<APIResponse<void>>;
 }

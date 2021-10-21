@@ -3,20 +3,25 @@ import { IAuthService } from "../../../core/ports/i-auth-service";
 
 type TokenType = "access-token" | "refresh-token";
 
+export enum TokenTypes {
+  AccessToken = "access-token",
+  RefreshToken = "refresh-token",
+}
+
 export class AuthService implements IAuthService {
-  public static accessTokenName: string = "ddd-forum-access-token";
-  public static refreshTokenName: string = "ddd-forum-refresh-token";
+  public static accessTokenName: string = "lazarus-access-token";
+  public static refreshTokenName: string = "lazarus-refresh-token";
 
   public accessToken: JWTToken;
   public refreshToken: RefreshToken;
 
   constructor() {
-    this.accessToken = this.getToken("access-token");
-    this.refreshToken = this.getToken("refresh-token");
+    this.accessToken = this.getToken(TokenTypes.AccessToken);
+    this.refreshToken = this.getToken(TokenTypes.RefreshToken);
   }
 
   private getTokenName(tokenType: TokenType): string {
-    return tokenType === "access-token" ? AuthService.accessTokenName : AuthService.refreshTokenName;
+    return tokenType === TokenTypes.AccessToken ? AuthService.accessTokenName : AuthService.refreshTokenName;
   }
 
   public getToken(tokenType: TokenType): JWTToken | RefreshToken {
@@ -47,6 +52,6 @@ export class AuthService implements IAuthService {
   }
 
   isAuthenticated(): boolean {
-    return this.getToken("access-token") !== null;
+    return this.getToken(TokenTypes.AccessToken) !== null;
   }
 }

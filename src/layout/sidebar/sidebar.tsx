@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import Header from "./header";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import { FaGem, FaHeart } from "react-icons/fa";
 import UserArea from "./user-area/user-area";
 import { Container, LinkContent, Title } from "./styles";
+import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
+import AddReactionRoundedIcon from "@mui/icons-material/AddReactionRounded";
 
 const SideBar: React.FC = () => {
   const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
@@ -25,11 +25,11 @@ const SideBar: React.FC = () => {
           </Title>
           <ProSidebar>
             <Menu>
-              <MenuItem icon={<FaGem />}>
+              <MenuItem icon={<AccessTimeRoundedIcon />}>
                 Agente de Saúde
                 <Link to="/health-agent" />
               </MenuItem>
-              <SubMenu title="Components" icon={<FaHeart />}>
+              <SubMenu title="Components" icon={<AddReactionRoundedIcon />}>
                 <MenuItem>Component 1</MenuItem>
                 <MenuItem>Component 2</MenuItem>
               </SubMenu>
