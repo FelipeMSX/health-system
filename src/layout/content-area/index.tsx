@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { UseAppContext } from "../../context/app-context";
-import Routes from "../../Routes";
+import Routes from "../../routes";
 import { RootState } from "../../store/store";
 import { Container } from "./styles";
 
