@@ -30,27 +30,21 @@ export abstract class BaseAPI {
 
   private getSuccessResponseHandler() {
     return (response: any) => {
-      console.log("interceptors success handler");
       return response;
     };
   }
 
   private didAccessTokenExpire(response: AxiosError): boolean {
     console.log("Erro checagem de messagem: " + response.message);
-    return response.message === "Token signature expired.";
+    console.log("Erro checagem de messagem JSON: " + JSON.stringify(response));
+
+    return response.message === "O token de autenticação expirou.";
   }
 
   private async regenerateAccessTokenFromRefreshToken(): Promise<JWTToken> {
     const response = await this.post<LoginDTO>("/users/token/refresh", {
       data: { refreshToken: this.authService.getToken("refresh-token") },
     });
-    // const response = await axios({
-    //   method: "POST",
-    //   url: `${this.baseUrl}/users/token/refresh`,
-    //   data: {
-    //     refreshToken: this.authService.getToken("refresh-token"),
-    //   },
-    // });
     return response.data.accessToken;
   }
 
@@ -94,8 +88,7 @@ export abstract class BaseAPI {
 
   protected post<T>(url: string, data?: any, params?: any, headers?: any): Promise<AxiosResponse<T>> {
     // return this.axiosInstance.post<T>(url, data ? data : null, headers ? { ...headers } : null);
-    console.log(headers);
-    console.log(data);
+
     return this.axiosInstance({
       method: "POST",
       url: `${this.baseURL}${url}`,

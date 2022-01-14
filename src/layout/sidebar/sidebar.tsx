@@ -12,7 +12,7 @@ import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import AddReactionRoundedIcon from "@mui/icons-material/AddReactionRounded";
 
 const SideBar: React.FC = () => {
-  const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
+  const isOpened = useSelector((state: RootState) => state.ui.isSideBarVisible);
 
   return (
     <>

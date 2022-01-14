@@ -1,15 +1,14 @@
 import React from "react";
 
 import { RootState } from "../../../store/store";
-import { close } from "../../../store/slices/sidebar-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { Content, Container } from "./styles";
-import StyledMaterialButton from "../../../components/icon-button";
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import { IconButton } from "@mui/material";
+import { toogleSideBar } from "../../../store/slices/ui/ui-slice";
 
 const Header: React.FC = () => {
-  const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
+  const isOpened = useSelector((state: RootState) => state.ui.isSideBarVisible);
   const dispatch = useDispatch();
 
   return (
@@ -18,7 +17,7 @@ const Header: React.FC = () => {
         <img src="logo192.png"></img>
         <span>Health</span>
       </Content>
-      <IconButton color="primary" onClick={() => dispatch(close())}>
+      <IconButton color="primary" onClick={() => dispatch(toogleSideBar(false))}>
         <MenuOpenRoundedIcon />
       </IconButton>
     </Container>

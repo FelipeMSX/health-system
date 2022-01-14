@@ -2,22 +2,24 @@ import React from "react";
 import { Container, LeftBar, RightBar, ToggleableItem } from "./styles";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { open } from "../../store/slices/sidebar-slice";
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import UserProfile from "./components/user-profile/user-profile";
+import { toogleSideBar } from "../../store/slices/ui/ui-slice";
 
 const NavBar: React.FC = () => {
-  const isOpened = useSelector((state: RootState) => state.sidebar.isOpened);
+  const isSideBarVisible = useSelector((state: RootState) => state.ui.isSideBarVisible);
+  const isNavBarVisible = useSelector((state: RootState) => state.ui.isNavBarVisible);
+
   const dispatch = useDispatch();
 
   const handleClick = () => {};
 
   return (
-    <Container className={isOpened ? "" : "expanded"}>
+    <Container className={isSideBarVisible ? "" : "expanded"}>
       <LeftBar>
-        <ToggleableItem isOpened={!isOpened}>
-          <IconButton color="secondary" onClick={() => dispatch(open())}>
+        <ToggleableItem isOpened={!isSideBarVisible}>
+          <IconButton color="secondary" onClick={() => dispatch(toogleSideBar(true))}>
             <MenuOpenRoundedIcon />
           </IconButton>
         </ToggleableItem>

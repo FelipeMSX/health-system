@@ -5,6 +5,7 @@ import { authenticate, getUserProfile, login } from "../modules/users/infra/redu
 async function initialReduxStartupScript(store: Store): Promise<void> {
   const response = await userService.getCurrentUserProfile();
   console.log("apos o request");
+  console.log(store.getState());
   if (response.isRight()) {
     console.log("success");
     store.dispatch(getUserProfile(response.value.getValue()));
