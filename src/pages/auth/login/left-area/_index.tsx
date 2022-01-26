@@ -82,8 +82,6 @@ const LeftAreaPage: React.FC = () => {
               isLoading={isFetchingData}
               fullWidth
               disabled={!allInputsAreValids}
-              variant="contained"
-              color="primary"
               labelText="Login"
               onClick={() => handleSubmit()}
             ></StyledLoadingRoundedButton>

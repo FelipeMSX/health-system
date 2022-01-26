@@ -35,7 +35,7 @@ const UserProfile: React.FC = () => {
 
   return (
     <>
-      <UserInfo onClick={handleClick}>
+      <UserInfo onClick={handleClick} variant="text">
         <UserLabel>
           <h1>Felipe Morais</h1>
           <span>Administrador</span>

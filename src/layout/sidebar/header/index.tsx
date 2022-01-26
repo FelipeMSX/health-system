@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         <img src="logo192.png"></img>
         <span>Health</span>
       </Content>
-      <IconButton color="primary" onClick={() => dispatch(toogleSideBar(false))}>
+      <IconButton onClick={() => dispatch(toogleSideBar(false))}>
         <MenuOpenRoundedIcon />
       </IconButton>
     </Container>

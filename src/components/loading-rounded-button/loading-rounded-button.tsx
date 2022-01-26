@@ -1,6 +1,7 @@
 import { LoadingButtonProps } from "@mui/lab";
 import StyledRoundedButton, { RoundedButtonProps } from "../rounded-button/rounded-button";
 import { LoadingRoundedButton } from "./styles";
+import React from "react";
 
 export interface LoadingRoundedButtonProps extends RoundedButtonProps {
   isLoading?: boolean;

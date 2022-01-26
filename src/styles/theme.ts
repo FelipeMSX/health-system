@@ -10,21 +10,28 @@ export const theme = createTheme({
       main: "#252f3e",
     },
   },
+
   components: {
-    // Name of the component
     MuiIconButton: {
       styleOverrides: {
-        // Name of the slot
         colorPrimary: {
-          // Some CSS
           color: "#d3d3d3",
         },
+        root: {},
       },
     },
     MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "50px",
+        },
+      },
+      defaultProps: {
+        variant: "contained",
+      },
       variants: [
         {
-          props: { variant: "rounded", color: "primary" },
+          props: { variant: "contained", color: "primary" },
           style: {
             borderRadius: "50px",
           },
