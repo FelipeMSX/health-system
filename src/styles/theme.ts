@@ -24,19 +24,12 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "50px",
+          height: "36.5px",
         },
       },
       defaultProps: {
         variant: "contained",
       },
-      variants: [
-        {
-          props: { variant: "contained", color: "primary" },
-          style: {
-            borderRadius: "50px",
-          },
-        },
-      ],
     },
   },
 });

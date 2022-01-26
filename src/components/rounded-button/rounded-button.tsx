@@ -1,5 +1,6 @@
 import { ButtonProps } from "@mui/material";
 import { RoundedButton } from "./styles";
+import React from "react";
 
 export interface RoundedButtonProps extends ButtonProps {
   labelText?: string;
